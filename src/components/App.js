@@ -23,6 +23,13 @@ export class App extends Component {
     filter: '',
   }
 
+  //  this.setState({
+  //    contacts: JSON.parse(localStorage.getItem('contacts'))
+  //  });
+
+  componentDidMount() {
+    console.log('mounted')
+  }
 
   componentDidUpdate(prevProps, prevState) {
     localStorage.setItem('contacts', JSON.stringify(this.state.contacts))
