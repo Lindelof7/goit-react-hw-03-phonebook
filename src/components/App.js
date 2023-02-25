@@ -66,7 +66,8 @@ export class App extends Component {
   render() {
     const { filter, contacts } = this.state;
     const loweredFilter = filter.toLocaleLowerCase();
-    const filteredContacts = contacts.filter(contact => contact.name.toLocaleLowerCase().includes(loweredFilter))
+    const filteredContacts =
+      contacts.filter(contact => contact.name.toLocaleLowerCase().includes(loweredFilter))
 
     return (
       <div className={(css.appWrap)}>
