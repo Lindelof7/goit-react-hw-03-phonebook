@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { React, Component } from "react";
 import PropTypes from 'prop-types'
 import nextId from "react-id-generator";
 import { ContactList } from './ContactList'
