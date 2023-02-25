@@ -57,7 +57,7 @@ export class App extends Component {
   removeContact = (id) => {
     this.setState(({ contacts }) => {
       return {
-        contacts: contacts.filter(item => item.id !== id)
+        contacts: this.state.contacts.filter(item => item.id !== id)
       }
     })
   }
@@ -66,8 +66,7 @@ export class App extends Component {
   render() {
     const { contacts, filter } = this.state;
     const loweredFilter = filter.toLocaleLowerCase();
-    const filteredContacts =
-      contacts.filter(contact => contact.name.toLocaleLowerCase().includes(loweredFilter))
+    const filteredContacts = contacts.filter(contact => contact.name.toLocaleLowerCase().includes(loweredFilter))
 
     return (
       <div className={(css.appWrap)}>
